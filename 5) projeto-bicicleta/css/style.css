@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+body{
+    background-image: linear-gradient(to bottom right,#F2F77A, #006aff);
+    font-family: 'Roboto', sans-serif;
+    color: white; 
+    font-size: 1.1rem;
+}
+a{
+    color: white;
+    text-decoration: none;/* Tirar o sublinhado do link */
+}
+.container{
+    width: 1024px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+}
+main{
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+.card1{
+    background-image: url(../images/images/img-02.png);
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 30px; /* Deixar um espaçamento entre a parte de cima do box e a imagem */
+    min-height: 250px;
+    width: 30%;
+    box-shadow: 0x 5px 5px rgba(0, 0, 0, 0.295);
+}
+.card2{
+    background-image: url(../images/images/img-03.png);
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 30px; /* Deixar um espaçamento entre a parte de cima do box e a imagem */
+    min-height: 250px;
+    width: 30%;
+    box-shadow: 0x 5px 5px rgba(0, 0, 0, 0.295);
+}
+.card3{
+    background-image: url(../images/images/img-04.png);
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 30px; /* Deixar um espaçamento entre a parte de cima do box e a imagem */
+    min-height: 250px;
+    width: 30%;
+    box-shadow: 0x 5px 5px rgba(0, 0, 0, 0.295);
+}
+.herobox1{
+    width: 50%;
+    flex: 2;
+    padding-right: 100px;
+    margin-left: 50px;
+}
+.herobox2{
+    width: 50%;
+    flex: 1;
+}
+h1{
+    font-size: 3.125rem;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 1rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.308);
+}
+p{
+    line-height: 1.50rem;
+    margin-bottom: 0.5rem;
+}
+h2{
+    font-size: 1.4rem;
+    font-family: 'Raleway', sans-serif;
+    margin: 25px;
+}
+.cards p{
+    font-size: 0.96rem;
+    line-height: 1rem;
+    margin: 10px 30px 20px 30px;
+}
+.mybutton{
+    background-color: white;
+    color: #036BF8;
+    padding: 11px 25px;
+    border-radius: 9px; /* ARREDONDAR A BORDA */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.247);
+}
+.mybutton:hover{
+    background-color: #036BF8;
+    color: white;
+    transition-duration: 1s;
+}
+
+a.mybutton{
+    display: inline-block; /* PRECISO TRANSFORMAR O BOTÃO EM UM BLOCO PARA PODER UTILIZAR O MARGIN-TOP */
+    margin-top: 20px;
+}
+.navbutton{
+    border: 1px solid white;
+    padding: 7px 25px;
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
+}
+.testemunhos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.tbox{
+    width: 47%;
+    padding: 50px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+}
+.navbutton:hover .dropdown{
+    display: block;
+}
+.dropdown .navbutton{
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.418)
+}

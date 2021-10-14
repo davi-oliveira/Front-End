@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+
+/* GLOBAL DESKTOP */
+h1{
+    color: green;
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    h1{
+        color: orange;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 500px){
+    h1{
+        color: rgb(89, 0, 255);
+    }
+}
