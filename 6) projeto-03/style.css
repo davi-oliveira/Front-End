@@ -1,21 +1,33 @@
 @charset "UTF-8";
 
+.container{
+    background-color: cornflowerblue;
+    min-height: 500px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-/* GLOBAL DESKTOP */
-h1{
-    color: green;
+.col{
+    background-color: blue;
+    min-height: 200px;
+    width: 30%;
+    margin-bottom: 40px;
 }
 
 /* Tablet */
 @media (max-width: 768px){
-    h1{
-        color: orange;
+    .col{
+        width: 45%;
     }
 }
 
 /* Smartphone */
-@media (max-width: 500px){
-    h1{
-        color: rgb(89, 0, 255);
+@media (max-width: 400px){
+    .col{
+        width: 100%;
     }
 }
