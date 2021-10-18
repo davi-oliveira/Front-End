@@ -87,10 +87,6 @@ header{
     .col{
         width: 45%;
     }
-    header{
-        display: block;
-        text-align: center;
-    }
     .header-container{
         position: relative;
     }
@@ -111,9 +107,19 @@ header{
     }
     .mob-wrapper{
         display: block;
+        padding-right: 30px;
     }
     .mob-nav{
         display: none;
+        position: absolute;
+        margin-top: 15px;
+    }
+    .navbutton{
+        display: block;
+        background-color: rgb(19, 81, 197);
+        padding: 15px 30px;
+        margin-left: -65px;
+        text-align: center;
     }
 }
 
