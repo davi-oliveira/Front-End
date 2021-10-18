@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 .container{
-    background-color: cornflowerblue;
     min-height: 500px;
     max-width: 1024px;
     margin-left: auto;
@@ -14,6 +17,23 @@
 .col{
     width: 30%;
     margin-bottom: 40px;
+    background-color: rgb(19, 81, 197);
+}
+
+.col p{
+    color: white;
+    font-size: 0.99rem;
+    padding: 20px;
+    line-height: 1.1rem;
+}
+
+.col img{
+    width: 100%;
+    height: auto;
+}
+
+.col p::first-line{
+    font-weight: 700;
 }
 
 /* Desktop */
@@ -21,11 +41,6 @@
     .hide-desktop-only{
         display: none;
     }
-}
-
-.col img{
-    width: 100%;
-    height: auto;
 }
 
 /* Tablet */
