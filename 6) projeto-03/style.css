@@ -77,12 +77,43 @@ header{
     .hide-desktop-only{
         display: none;
     }
+    .mob-wrapper{
+        display: none;
+    }
 }
 
 /* Tablet */
 @media (max-width: 768px){
     .col{
         width: 45%;
+    }
+    header{
+        display: block;
+        text-align: center;
+    }
+    .header-container{
+        position: relative;
+    }
+    .container{
+        padding-top: 140px;
+    }
+    nav{
+        display: none;
+    }
+    nav a{
+        display: block;
+    }
+    .logo{
+        padding: 40px;
+    }
+    .mybutton{
+        margin-left: 0;
+    }
+    .mob-wrapper{
+        display: block;
+    }
+    .mob-nav{
+        display: none;
     }
 }
 
