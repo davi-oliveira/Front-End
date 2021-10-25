@@ -30,3 +30,12 @@ h1{
 .btn-outline-light:hover{
     background-color: rgba(255, 255, 255, 0.212);
 }
+
+.final{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    margin: 50px;
+}
