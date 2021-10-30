@@ -12,7 +12,7 @@ btnCalc.addEventListener('click', function(){
     document.getElementById('mostrarInfo').style.display = "block";
     divMostrar.innerHTML = `
         <h2>
-            <p><div>Promoção: <span class="campo">${frmModelo}</span></div></p>
+            <p><div>Modelo: <span class="campo">${frmModelo}</span></div></p>
             <p><div>Entrada de <span class="campo">R$ ${frmValor.toFixed(2)}</span></div></p>
             <p><div>+60 de <span class="campo">R$ ${valorParcela.toFixed(2)}</span></div></p>
         </h2>
