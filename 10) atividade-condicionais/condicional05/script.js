@@ -1,6 +1,5 @@
 var frmPerm
 var frmAtual
-var frmPerc
 
 btnCalc.addEventListener('click', function(){
     frmPerm = parseInt(vPerm.value)
@@ -19,8 +18,7 @@ btnCalc.addEventListener('click', function(){
     }
 
     //================================== ATÉ 20%
-    frmPerc = frmPerm + (frmPerm*0.20)
-    if(frmAtual <= frmPerc){
+    if(frmAtual <= frmPerm*1.20){
         divMostrar.innerHTML = `
         <h2>
             Multa leve
@@ -30,8 +28,7 @@ btnCalc.addEventListener('click', function(){
     }
 
     //================================== + 20%
-    frmPerc = frmPerm + (frmPerm*0.20)
-    if(frmAtual > frmPerc){
+    if(frmAtual > frmPerm*1.20){
         divMostrar.innerHTML = `
         <h2>
             Multa Grave
