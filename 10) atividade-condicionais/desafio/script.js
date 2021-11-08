@@ -2,12 +2,13 @@ var frmValor
 var cem = 0
 var cinquenta = 0
 var dez = 0
-var sobra = 0
 
 btnCalc.addEventListener('click', function(){
+    cem = 0;
+    cinquenta = 0
+    dez = 0
     frmValor = dinheiro.value
     if(frmValor%10 != 0) return alert('Não é possível sacar esse valor\nNotas disponíveis: R$ 100 / R$  50 / R$ 10')
-    sobra = dinheiro.value
     divMostrar = document.getElementById('mostrarInfo')
 
     for (let i = frmValor; i >= 100; i -= 100) {
