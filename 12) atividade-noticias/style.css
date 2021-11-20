@@ -6,6 +6,10 @@
     justify-content: flex-end;
 }
 
+.fechamento:hover{
+    color: white;
+}
+
 .logo{
     margin-left: 10px;
     margin-right: 20px;
@@ -24,20 +28,60 @@
     margin-top: -40px;
 }
 
-.imgEmail{
-    
-}
-
 .field2{
     display: flex;
     flex-direction: column;
 }
 
-p{
+.paragrafo{
     color: white;
-    margin-top: -57px;
+    margin-top: -63px;
     margin-left: 35px;
 }
-p.paragrafo2{
-    margin-top: 8px;
+.paragrafo2{
+    color: white;
+    margin-top: 12px;
+    margin-left: 35px;
+}
+
+.caixa-email{
+    margin-top: -60px;
+    margin-left: 280px;
+    width: 300px;
+}
+
+.caixa-email2{
+    margin-top: 5px;
+    margin-left: 305px;
+    width: 300px;
+}
+
+.botao1{
+    width: 100px;
+    height: 30px;
+    margin-top: -68px;
+    margin-left: 590px;
+}
+
+.botao2{
+    width: 100px;
+    height: 30px;
+    margin-left: 615px;
+    margin-top: 10px;
+}
+
+.textoAdd{
+    margin-left: 55px;
+}
+
+.imgAdd{
+    margin-bottom: -48px;
+}
+
+.imgRodape{
+    margin-top: -5px;
+}
+
+.imgRodape2{
+    margin-top: 5px;
 }
