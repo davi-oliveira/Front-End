@@ -50,5 +50,17 @@ btnMostrar.addEventListener('click', mostrarNoticias)
 
 btnDeletar.addEventListener('click', deletarNoticias)
 
+btnRecarregar.addEventListener('click', function(){
+    location.reload();
+})
+
+btnListarNav.addEventListener('click', function(){
+    mostrarNoticias()
+})
+
+btnDeletarNav.addEventListener('click', function(){
+    deletarNoticias()
+})
+
 
 
