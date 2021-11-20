@@ -14,17 +14,23 @@ const cadastrarNoticia = function(){
     document.querySelector("#noticia").focus()
 }
 
-const mostrarNoticias = function(){
-    if(todasNoticias.length == 0) return alert('Você não possui notícias cadastradas')
+const mostrarNoticias = function(valor){
+    if(valor != true) {
+        if(todasNoticias.length == 0) return alert('Você não possui notícias cadastradas')
+    }
+    document.querySelector("#tituloNoticias").style = "display: none"
     document.querySelector("#mostrarNoticias").innerHTML = ``
     todasNoticias.forEach(function(texto, numero){
         if(texto != "") {
-            document.querySelector("#mostrarNoticias").innerHTML += `<article class="message is-info is-medium"><div class="message-header"><h1>Notícia ${numero+1}</h1></div><div class="message-body">${texto}</div></article>`
+            
+            document.querySelector("#mostrarNoticias").innerHTML += `
+            <article class="message is-info is-medium"><div class="message-header"><h1>Notícia ${numero+1}</h1><span onclick="deletarUma(${numero+1})" class = "fechamento" id="fechar${numero+1}">x</span></div><div class="message-body">${texto}</div></article>`
         }
     })
 }
 
 const deletarNoticias = function(){
+    if(todasNoticias.length == 0) return alert('Não há notícias para deletar!')
     document.querySelector("#tituloNoticias").style = "display: none"
     document.querySelector("#mostrarNoticias").innerHTML = ``
      while(todasNoticias.length > 0){
@@ -32,8 +38,17 @@ const deletarNoticias = function(){
     }
 }
 
+const deletarUma = function(msg){
+    todasNoticias.splice(msg-1, 1);
+    mostrarNoticias(true)
+}
+
+
 btnCadastrarNoticia.addEventListener('click', cadastrarNoticia)
 
 btnMostrar.addEventListener('click', mostrarNoticias)
 
 btnDeletar.addEventListener('click', deletarNoticias)
+
+
+

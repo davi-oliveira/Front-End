@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.fechamento{
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+}
