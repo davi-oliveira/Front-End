@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noticiário</title>
+  <link rel="shortcut icon" href="imagens/favicon.ico" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <!-- <a class="navbar-item" href="https://bulma.io">
+        <img src="imagens/news.png">        
+      </a> -->
+      
+      <div class="logo">
+        <img src="imagens/news.png">    
+      </div>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          Página Inicial
+        </a>
+  
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Manipular notícias
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item" id="btnListarNav">
+              Listar
+            </a>
+            <a class="navbar-item" id="btnDeletarNav">
+              Deletar todas
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary" id="btnRecarregar">
+              <strong>Recarregar</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="section">
+    <div class="container">
+      <img src="imagens/jornal.png" alt="" width="45px" class="imgAdd"><h1 class="title textoAdd">Adicionar Notícia</h1>
+      <hr>
+      <div class="field">
+        <label class="label">⚠️ Notícia</label>
+        <div class="control">
+          <textarea class="textarea is-info" required id="noticia" placeholder="Digite aqui sua notícia"></textarea>
+        </div>
+      </div>
+      <div class="field is-grouped is-grouped-centered">
+        <div class="control">
+          <button class="button is-link" id="btnCadastrarNoticia">Cadastrar</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light" id="btnMostrar">Listar Notícias (atualizar)</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-danger" id="btnDeletar">Deletar Todas Noticias!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="subtitle" id="tituloNoticias">
+        Aperte o botao:Listar Notícias (atualizar) para, mostrar as <span id="qtdNoticias"></span> últimas notícias
+      </h2>
+      <div id="mostrarNoticias">
+
+      </div>
+    </div>
+  </section>
+  <form class="box">
+    <div class="field field2">
+      <img src="imagens/e-mail.png" alt="" width="30px" class="imgRodape">
+      <img src="imagens/whastapp.png" alt="" width="30px" class="imgRodape2">
+      <p class="paragrafo">Receba novas notícias por E-mail</p>
+      <p class="paragrafo2">Receba novas notícias por Whastapp</p>
+      
+      <div class="control has-icons-left has-icons-right caixa-email">
+        <input class="input is-small" type="email" placeholder="Email">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>
+
+      <div class="control has-icons-left has-icons-right caixa-email2">
+        <input class="input is-small" type="text" placeholder="Telefone">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>
+
+      <button class="button is-warning botao1">Receba já</button>
+
+      <button class="button is-warning botao2">Receba já</button>
+
+
+    </div>
+  </form>
+</body>
+</html>
