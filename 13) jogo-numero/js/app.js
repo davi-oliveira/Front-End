@@ -16,7 +16,7 @@ document.getElementById("jogarnvm").style.display = "none"
 var erros = []
 const VALOR_SORTEADO = parseInt(Math.random()*60+1)
 var chances = 6
-var errados = ""
+var dicas = ""
 
 
 
@@ -57,33 +57,42 @@ function apostarNumero(number){
         document.getElementById("apostar").style.display = "none"
         document.getElementById("jogarnvm").style.display = "block"
         document.getElementById("saidaDica").innerHTML = `
-        Parabéns! O número sorteado é: ${number}
+        <h4 class="alert alert-success">Parabéns! O número sorteado é: ${number}</h4>
         `
         return 1;
     }
     else{
         if(erros.indexOf(number) !== -1){
             alert(`Você já apostou no número ${number}. Tente outro!!!`)
+            document.getElementById("numero").focus()
+            document.getElementById("numero").value = ""
         }
         else{
             erros.push(number)
             chances--
-            erros.forEach(function(texto, numero){
-               errados += texto + ", " 
-            })
             document.getElementById("saidaErro").innerHTML = `
-            ${erros.lenght} (${errados})
+            <h4 class="alert alert-danger">${erros.length} (${erros})</h4>
             `
-            document.getElementById("saidaChance").innerHTML = chances
+            document.getElementById("saidaChance").innerHTML = `
+            <h4 class="alert alert-primary">${chances}</h4>`
+
+            if(chances != 0){
+                dicas = number < VALOR_SORTEADO ? "maior" : "menor"
+                saidaDica.innerHTML = `
+                <h4 class="alert alert-success">Tente um número ${dicas} que o ${number}</h4>
+            `
+            }
+            document.getElementById("numero").focus()
+            document.getElementById("numero").value = ""
         }
 
         if(chances == 0){
-            document.getElementById("saidaChance").innerHTML = "Suas chances acabaram!"
+            document.getElementById("saidaChance").innerHTML = `<h4 class="alert alert-primary">6</h4>`
             document.getElementById("apostar").style.display = "none"
             document.getElementById("jogarnvm").style.display = "block"
             
             saidaDica.innerHTML = `
-                GAME OVER! O número sorteado é ${number}
+                <h4 class="alert alert-success">GAME OVER! O número sorteado é ${VALOR_SORTEADO}</h4>
             `
         }
     }
