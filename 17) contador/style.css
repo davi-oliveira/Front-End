@@ -1,38 +1,34 @@
 @charset "UTF-8";
 
 body{
+
     font-family: 'Roboto', sans-serif;
     color: white;
-    background-color: black;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    margin-top: 125px;
-}
-
-h1,h3, input{
-    margin-left: auto;
-    margin-right: auto;
+    background-image: url('hora.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1{
-    color: rgb(104, 255, 44);
-    font-size: 50px;
+    font-size: 70px;
+    text-shadow: red 0 -2px;
 }
 
 h3{
-    color: rgb(146, 144, 144);
     font-size: 25px;
-    margin-top: -10px;
 }
 
-.botaoCtg{
-    background-color: rgb(104, 255, 44);
-    width: 210px;
+
+.form-label{
+    font-size: 20px;
+}
+.form-control{
+    width: 280px;
+}
+.btn-secondary{
+    width: 200px;
     height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 13px;
+}
+.contagem{
+    font-size: 50px;
 }
