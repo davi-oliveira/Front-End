@@ -1,34 +1,34 @@
-@charset "UTF-8";
+#teste{
+	width: 1360px;
+	height: 600px;
+	background-color: teste;
+}
+
+#btnCalc, #btnReset{
+	margin-top: 10px;
+  margin-left: 120px;
+}
 
 body{
+  font-family: 'Roboto', sans-serif;
+  background-image: url('background.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
 
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    background-image: url('hora.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
+#demo{
+  margin-top: -150px;
+  text-align: center;
+  font-size: 70px;
 }
 
 h1{
-    font-size: 70px;
-    text-shadow: red 0 -2px;
+  font-size: 80px;
+  margin-bottom: 20px;
+  text-shadow: red 0 -2px;
 }
 
-h3{
-    font-size: 25px;
-}
-
-
-.form-label{
-    font-size: 20px;
-}
-.form-control{
-    width: 280px;
-}
-.btn-secondary{
-    width: 200px;
-    height: 50px;
-}
-.contagem{
-    font-size: 50px;
+input{
+  margin-left: 80px;
 }

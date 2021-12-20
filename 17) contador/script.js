@@ -1,76 +1,44 @@
-// var eventTime= toTimestamp(dataCampo());
-var eventTime = toTimestamp('12/20/2021 14:00:00')
-var currentTime = toTimestamp(dataAtual()); 
-
-// TIMESTAMP PARA DATA
-var date = new Date(eventTime*1000);
-console.log(date)
-
-var date2 = new Date(currentTime*1000);
-console.log(date2)
-//==============================================
-
-var diffTime = eventTime - currentTime;
-var duration = moment.duration(diffTime*1000, 'milliseconds');
-var interval = 1000;
-
-setInterval(function(){
-  duration = moment.duration(duration - interval, 'milliseconds');
-  console.log(duration.hours() + ":" + duration.minutes() + ":" + duration.seconds())
-
-  document.getElementById('dias').innerHTML = diasFaltam()
-  document.getElementById('horas').innerHTML = duration.hours()
-  document.getElementById('minutos').innerHTML = duration.minutes()
-  document.getElementById('segundos').innerHTML = duration.seconds()
-
-
-}, interval);
-
-function dataAgora(){
-    // DATA PARA TIMESTAMP
-    var myDate = "2021-12-19";
-    myDate = myDate.split("-");
-    var newDate = new Date( myDate[0], myDate[1] - 1, myDate[2]);
-    return newDate.getTime()/1000
-    //===============================================
-}
+document.getElementById('btnReset').style.display = 'none'
 
 function dataCampo(){
-    // DATA PARA TIMESTAMP
-    var myDate = document.getElementById('cmp-data').value;
-    myDate = myDate.split("-");
-    var newDate = new Date( myDate[0], myDate[1] - 1, myDate[2]);
-    return newDate.getTime()/1000
-    //===============================================
-}
-
-function toTimestamp(date){
-    //let strDate = '12/19/2021 12:00:00'
-    //let strDate = dataCampo()
-    var datum = Date.parse(date);
-    return datum/1000
- }
-
- function dataCampo(){
-    let anoSelec = document.getElementById('cmp-data').value.substr(0, 4)
-    let mesSelec = document.getElementById('cmp-data').value.substr(5, 2) 
-    let diaSelec = document.getElementById('cmp-data').value.substr(8, 3)
+    let anoSelec = document.getElementById('cmpData').value.substr(0, 4)
+    let mesSelec = document.getElementById('cmpData').value.substr(5, 2) 
+    let diaSelec = document.getElementById('cmpData').value.substr(8, 3)
 
     now = new Date
-    return `${mesSelec}/${diaSelec}/${anoSelec} 00:00:00`
+    return `${mesSelec} ${diaSelec}, ${anoSelec} 00:00:00`
  }
 
- function dataAtual(){
-    let agora = new Date
-    return `${agora.getMonth()+1}/${agora.getDate()}/${agora.getFullYear()} ${agora.getHours()}:${agora.getMinutes()}:${agora.getSeconds()}`
- }
+ btnCalc.addEventListener('click', function(){
+   if(document.getElementById('cmpData').value == ""){
+     return alert('Você precisa selecionar uma data!')
+   }
+  var countDownDate = new Date(dataCampo()).getTime(); // var countDownDate = new Date("Jan 5, 2022 00:00:00").getTime();
+  if(countDownDate < new Date()) {
+    return alert('Você digitou uma data anterior a atual!')
+  }
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
 
- function diasFaltam(){
-    let date01 = document.getElementById('cmp-data').value.replace(/-/g, "/");
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    var date1 = new Date(dataAtual().substr(0,10));
-    var date2 = new Date(date01);
-    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
-    return diffDays
- }
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  document.getElementById('btnCalc').style.display = 'none'
+  document.getElementById('btnReset').style.display = 'block'
+  document.getElementById('cmpData').disabled = true
+})
+
+btnReset.addEventListener('click', function(){
+  document.location.reload(true);
+})
