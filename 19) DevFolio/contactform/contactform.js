@@ -114,7 +114,7 @@ jQuery(document).ready(function($) {
      * @todo montar a configuração usando seu e-mail e sua senha de app do GMAIL (Gerenciar sua conta google -> 
      * Segurança -> (verificacao em duas etapas tem que estar ativada)) -> Senhas de app -> Selecionar app -> E-mail -> Outro -> adicionar um nome
      */
-    let emailsenha = "&email=seuemail@gmail.com&senha=senha16digitos"
+    let emailsenha = "&email=davirdoliveira@gmail.com&senha=123456"
 
     $('#btnMandar').hide();
     $('form input').prop('disabled', true)
