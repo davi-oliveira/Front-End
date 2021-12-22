@@ -40,6 +40,6 @@ function pegarImagem(){
 
 outro.addEventListener('click', function(){
     pegarImagem()
-    let randNum = parseInt(Math.random() * (300 - 200) + 200)
+    let randNum = parseInt(Math.random() * (300 - 200) + 200) //numero randômico entre 200 e 300
     document.getElementById('paraConselho').innerHTML = `<img src="https://picsum.photos/${randNum}/300" alt="" class="cabrinha" id="imgAleatoria">`
 })
