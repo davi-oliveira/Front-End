@@ -1,2 +1,2 @@
-# curso-front-end
-Aqui temos os scripts utilizados no curso de Front-End do SENAI.
+# Curso Front-End - SENAI
+### Realizado entre 13/09/2021 e 23/12/2021
